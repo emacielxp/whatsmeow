@@ -935,7 +935,7 @@ func getButtonAttributes(msg *waE2E.Message) waBinary.Attrs {
 		return waBinary.Attrs{
 			"v": "2",
 			// Force list message sent as product_list instead of single_select
-			"type": strings.ToLower(waE2E.ListMessage_ListType_name[int32(*waProto.ListMessage_PRODUCT_LIST.Enum())]),
+			"type": strings.ToLower(waE2E.ListMessage_ListType_name[int32(*waE2E.ListMessage_PRODUCT_LIST.Enum())]),
 		}
 	default:
 		return waBinary.Attrs{}
